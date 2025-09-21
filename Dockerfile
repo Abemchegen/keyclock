@@ -1,9 +1,7 @@
-# Use official Keycloak image
 FROM quay.io/keycloak/keycloak:21.1.1
 
-
-# Expose default Keycloak port
+# Expose Keycloak port
 EXPOSE 8080
 
-# Start Keycloak in development mode
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]
+# Start Keycloak in production mode with HTTP enabled on port 8080
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--http-enabled=true", "--http-port=8080"]
