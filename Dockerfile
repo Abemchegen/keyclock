@@ -1,4 +1,4 @@
-FROM quay.io/keycloak/keycloak:21.1.1
+FROM quay.io/keycloak/keycloak:26.3.3
 
 EXPOSE 8080
 
