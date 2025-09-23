@@ -6,4 +6,4 @@ EXPOSE 8080
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
 # Run Keycloak, binding to Render’s dynamic por
-CMD ["start", "--http-enabled=true", "--http-port=8080", "--cache=local", "--proxy-headers","--verbose"]
+CMD ["start", "--http-enabled=true", "--http-port=8080", "--cache=local", "--proxy-headers=xforwarded","--verbose"]
