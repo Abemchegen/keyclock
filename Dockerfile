@@ -5,5 +5,5 @@ FROM quay.io/keycloak/keycloak:26.3.3
 EXPOSE 8080
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 
-# Run Keycloak, binding to Render’s dynamic port
-CMD ["start", "--http-enabled=true", "--http-port=8080", "--cache=local",  "--verbose"]
+# Run Keycloak, binding to Render’s dynamic por
+CMD ["start", "--http-enabled=true", "--http-port=8080", "--cache=local",  "--proxy=edge","--verbose"]
