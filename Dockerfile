@@ -5,4 +5,4 @@ FROM quay.io/keycloak/keycloak:26.3.3
 EXPOSE 8080
 
 # Run Keycloak, binding to Render’s dynamic port
-CMD ["start", "--http-enabled=true", "--http-port=${PORT}"]
+CMD kc.sh start --http-enabled=true --http-port=${PORT} --optimized
